@@ -1,8 +1,5 @@
 @import url('./fonts.css');
 
-h1 {
-    font-family: cubano, sans-serif;
-}
 
 body {
     --tw-bg-opacity: 1;
@@ -12,4 +9,146 @@ body {
     background-attachment: fixed;
     --tw-text-opacity: 1;
     color: rgb(248 248 248 / var(--tw-text-opacity));
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: .375rem;
+    height: 100%;
+    background: rgba(255, 255, 255, .05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: .374rem;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+    z-index: 2;
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* border-bottom: 1px solid lightgray; */
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    background: rgb(18, 24, 27);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+header .logo {
+    height: 100%; 
+    margin-left: 40px;
+}
+
+header .logo img {
+    height: 60px;
+    padding: 20px;
+}
+
+header nav {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(248 248 248 / var(--tw-text-opacity));
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    padding: 40px 20px;
+    line-height: 100px;
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    background: linear-gradient(to right, #f97316, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+header .login_panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+header .login_panel a{
+    padding: 10px;
+    background: white;
+    text-decoration: none;
+    color: #333;
+    font-family: cubano;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    box-shadow: 8px 8px 0 #000;
+    transition: .3s ease-in-out;
+}
+
+header .login_panel .login_btn:hover {
+    background: #1877f2;
+    color: #fff;
+}
+
+header .login_panel .signup_btn:hover {
+    background: #36a420;
+    color: #fff;
 }

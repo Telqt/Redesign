@@ -1,0 +1,48 @@
+.hero {
+    width: 90%;
+    height: 50vh;
+    background: url('../img/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 20vh auto 0;
+    box-shadow: 10px 10px 0 #00000079;
+    position: relative;
+    border-radius: 10px;
+}
+
+.hero p {
+    font-family: cubano, sans-serif;
+    color: white;
+    font-size: 3rem;
+    width: 50%;
+    position: absolute;
+    text-transform: uppercase;
+    left: 5%;
+    bottom: 35%;
+    text-shadow: 5px 5px 10px #000;
+    user-select: none;
+}
+
+.shop_now {
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+    background: rgb(200, 0, 0);
+    color: white;
+    position: absolute;
+    padding: 20px 30px;
+    left: 5%;
+    bottom: 10%;
+    cursor: pointer;
+    border: none;
+    font-weight: normal;
+    user-select: none;
+    /* border-radius: 3px; */
+}
+
+.shop_now:hover {
+    background: rgb(255, 20, 20);
+}
+
+.shop_now:active {
+    background: rgb(255, 95, 95);
+}
